@@ -1,0 +1,127 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{textcomp}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{emptypage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead[L]{}
+\fancyhead[R]{}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{\leftmark}
+\renewcommand{\headrulewidth}{0pt}
+
+\renewcommand\O{\ensuremath{\varnothing}}
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\F{\ensuremath{\mathbb{F}}}
+
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+
+% Horizontal Line
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\usepackage{stmaryrd} % for \lightning
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em, innertopmargin=5pt, innerbottommargin=6pt}
+
+\theoremstyle{definition}
+
+\declaretheoremstyle[
+  headfont = \bfseries\upshape,
+  bodyfont = \normalfont,
+  numbered = no,
+  mdframed = {
+    linewidth = 1pt,
+    rightline = false,
+    topline = false,
+    bottomline = false,
+    linecolor = ForestGreen,
+    backgroundcolor = ForestGreen!5,
+  }
+]{thmgreenbox}
+
+\declaretheoremstyle[
+  headfont = \bfseries\upshape,
+  bodyfont = \normalfont,
+  numbered = no,
+  mdframed = {
+    linewidth = 1pt,
+    rightline = false,
+    topline = false,
+    bottomline = false,
+    linecolor = NavyBlue,
+    backgroundcolor = NavyBlue!5,
+  }
+]{thmbluebox}
+
+\declaretheoremstyle[
+  headfont = \bfseries\upshape,
+  bodyfont = \normalfont,
+  numbered = no,
+  mdframed = {
+    linewidth = 1pt,
+    rightline = false,
+    topline = false,
+    bottomline = false,
+    linecolor = RawSienna,
+    backgroundcolor = RawSienna!5,
+  },
+]{thmredbox}
+
+\declaretheoremstyle[
+  headfont = \bfseries\upshape,
+  bodyfont = \normalfont,
+  numbered = no,
+  mdframed = {
+    linewidth = 1pt,
+    rightline = false,
+    topline = false,
+    bottomline = false,
+    linecolor = RawSienna,
+    backgroundcolor = RawSienna!2,
+  },
+  qed=$\qedsymbol$
+]{thmproofbox}
+
+\declaretheorem[style=thmgreenbox, name=Definicja]{definition}
+\declaretheorem[style=thmbluebox, name=Przykład]{example}
+\declaretheorem[style=thmredbox, name=Twierdzenie]{theorem}
+\declaretheorem[numbered=no, style=thmproofbox, name=Dowód]{replacementproof}
+\renewenvironment{proof}[1][\proofname]{\vspace{-10.3pt}\begin{replacementproof}}{\end{replacementproof}}
+
+\title{Algebra}
+\author{}
+\date{}

@@ -5,90 +5,64 @@
 \section{Definicja jednomianu i wielomianu}
 
 \begin{definition}
-  Jednomian stopnia $n, \, n \in \N^+$, dla zmiennej rzeczywistej $x$,
-  to wyrażenie o postaci $a \cdot x^n$, gdzie $a \neq 0$.
-
-  Jednomian stopnia zero to stała różna od zera. \\
-  Jednomian zerowy to stała równa 0, nie ma określonego stopnia.
+  Jednomian stopnia $n, \, n \in \N^+$, dla zmiennej rzeczywistej $x$, to wyrażenie o postaci
+  $a \cdot x^n$, gdzie $a \neq 0$.
 \end{definition}
 
-\begin{example} $-\frac{3}{2} x^4$ to jednomian stopnia 4 \end{example}
+\begin{example}
+  Jednomian równy 0 to jednomian zerowy który nie posiada stopnia.
+\end{example}
 
 \begin{definition}
-  Wielomian stopnia $n, \, n \in \N^+$, dla liczby rzeczywistej $x$, to wyrażenie o postaci:
-  \[
-    a_{n} \cdot x^{n} + a_{n - 1} \cdot x^{n - 1} + a_{n - 2} \cdot x^{n - 2} + \dots + a_{2} \cdot x^{2} + a_{1} \cdot x + a_{0}
-  \]
-  Przy czym liczba $a_i$ to współczynnik wielomianu stopnia $n$ ($0 \leq i \leq n, \, a_n \neq 0$).
-  Pojedyńcze jednomiany $a_n \cdot x^n, \, \dots , \, a_1 \cdot x, \, a_0$ to wyrazy wielomianu, gdzie $a_0$ to wyraz wolny.
-
-  Wielomian stopnia zero to stała różna od zera, np. \(W(x) = -1\).
-  Wielomian zerowy to liczba równa 0, \(W(x) \equiv 0\).
-
-  Suma wszystkich współczynników wielomianu \(W(x)\) jest równa \(W(1)\). \\
-  Stopień wielomianu \(W(x)\) oznaczany jest jako \(\deg\left(W\right) = n\)
-
-  Jeżeli \(W\) i \(V\) to wielomiany to zachodzi:
-  \[
-    \deg\left(W \cdot V\right) = \deg(W) + \deg(V)
-  \]
-  \[
-    \deg\left(W + V\right) = \max(\deg(W) + \deg(V))
-  \]
+  Wielomian stopnia $n, \, n \in \N^+$, dla zmiennej rzeczywistej $x$, to wyrażenie o postaci:
+  $$W(x)  = a_{n} \cdot x^{n} + a_{n - 1} \cdot x^{n - 1} + a_{n - 2} \cdot x^{n - 2} + \cdots + a_{2} \cdot x^{2} + a_{1} \cdot x + a_{0}$$
+  gdzie, $a_i$ ($0 \leq i \leq n$) to ustalona liczba rzeczywista oraz $a_n \neq 0$.
 \end{definition}
 
-\begin{example} $W(x) = 4x^3 + -5x + 3, \, W(1) = 4 - 5 + 3 = 2$ \end{example}
+\begin{example}
+  Suma współczynników wielomianu ($\sum_{i = 0}^{n}{a_i}$), wynosi $W(1)$.
+\end{example}
+
+\begin{example}
+  Wielomian równy 0 to wielomian zerowy, $W(x) \equiv 0$.
+\end{example}
+
+\begin{example}
+  Stopień wielomianu $W(x)$ to $\deg(W) = n$
+\end{example}
 
 \section{Wzory skróconego mnożenia}
 
 \begin{theorem}
-  Dla dowolnych $a, b$ zachodzą:
-\begin{align*}
-  \left(a + b\right)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\
-  \left(a - b\right)^3 = a^3 - 3a^2b + 3ab^2 - b^3 \\
-  a^3 + b^3 = \left(a + b\right)\left(a^2 - ab + b^2\right) \\
-  a^3 - b^3 = \left(a - b\right)\left(a^2 + ab + b^2\right)
-\end{align*}
+  Dla dowolnych $a$ i $b$ zachodzą:
+  \begin{align*}
+    \left( a + b \right)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
+    \left( a - b \right)^3 &= a^3 - 3a^2b + 3ab^2 - b^3 \\
+    a^3 + b^3 &= \left( a + b \right)\left( a^2 - ab + b^2 \right) \\
+    a^3 - b^3 &= \left( a - b \right)\left( a^2 + ab + b^2 \right)
+  \end{align*}
 \end{theorem}
 
 \begin{theorem}
-  Dla dowolnych $a, b$ oraz $n > 1, \, n \in \N$, zachodzi:
+  Dla dowolnych $a, b$ oraz $n > 1, \, n \in \N^+$, zachodzi:
   \[
-    a^n - b^n = \left(a - b\right)\left(a^{n - 1} + a^{n - 2}b + a^{n - 3}b^2 + \dots + a^2b^{n - 3} + ab^{n - 2} + b^{n - 1}\right)
+    a^n - b^n = \left( a - b \right) \left( a^{n - 1} + a^{n - 2}b + a^{n - 3}b^2 + \cdots + a^2b^{n - 3} + ab^{n - 2} + b^{n - 1}\right) 
   \]
-  Ponadto, jeśli $a \neq b$, to dla dowolnego $n \in \N$, liczba $a - b$ jest dzielnikiem liczby $a^n - b^n$.
 \end{theorem}
+
 \begin{proof}
-  Aby udowodnić twierdzenie wystarczy pokazać, że:
-  \[(a - b)(a^{n-1} + a^{n-2}b + \cdots + b^{n-1}) = a^n - b^n\]
-  Rozwijamy lewą strone równania:
-    \[
-      \left(a - b\right) \sum_{k = 0}^{n - 1}a^{n - 1 - k}b^k =
-      a \sum_{k = 0}^{n - 1}a^{n - 1 - k}b^k - b \sum_{k = 0}^{n - 1}a^{n - 1 - k}b^k
-    \]
-  Pierwsza suma to:
+  Aby udowodnić twierdzenie wystarczy wykazać, że:
   \[
-    a\sum_{k = 0}^{n - 1}a^{n - 1 - k}b^{k} = \sum_{k = 0}^{n - 1}a^{n - k}b^{k} = \left(a^n + a^{n - 1}b + \dots + ab^{n - 1}\right)
+    \left( a - b \right) \left( a^{n - 1} + a^{n - 2}b + \cdots + ab^{n - 2} + b^{n - 1} \right) = a^n - b^n
   \]
-  Natomiast druga suma to:
+  Rozwijając lewą strone równania otrzymujemy dwie sumy:
+  \begin{align*}
+    &a \sum_{k = 0}^{n - 1}{a^{n - 1 - k}b^{k}} = \sum_{k = 0}^{n - 1}{a^{n - k}b^{k}} = a^n + \sum_{k = 1}^{n - 1}{a^{n - k}b^k} \\
+    &b \sum_{k = 0}^{n - 1}{a^{n - 1 - k}b^{k}} = \sum_{k = 0}^{n - 1}{a^{n - 1 - k}b^{k + 1}} = b^n + \sum_{k = 0}^{n - 2}{a^{n - 1 -k}b^{k + 1}}\\
+  \end{align*}
+  Łącząc powyższe sumy:
   \[
-    b\sum_{k = 0}^{n - 1}a^{n - 1 - k}b^{k} = \sum_{k = 0}^{n - 1}a^{n - 1 - k}b^{k + 1} = \left(a^{n - 1}b + a^{n - 2}b^2 + \dots + b^n\right)
+    a^n - b^n + \sum_{k = 1}^{n - 1}{a^{n - k}b^k} - \sum_{k = 0}^{n - 2}{a^{n - 1 - k}b^{k + 1}}
   \]
-  Łączymy obie sumy i otrzymujemy:
-  \[
-    a^n + \sum_{k = 1}^{n - 1}a^{n - k}b^{k} - \sum_{k = 0}^{n - 2}a^{n - 1 - k}b^{k + 1} - b^n
-  \]
-  Podstawiając \(j = k + 1\) w drugiej sumie, otrzymujemy:
-  \[
-    \sum_{k = 0}^{n - 2}a^{n - 1 - k}b^{k + 1} = \sum_{j = 1}^{n - 1}a^{n - j}b^{j}
-  \]
-  Ponieważ \(\sum_{k = 1}^{n - 1}a^{n - k}b^k = \sum_{j = 1}^{n - 1}a^{n - j}b^k\), sumy się skracają, pozostawiając:
-  \[
-    a^n - b^n
-  \]
+  Podstawiając $j = k + 1$ do pierwszej sumy zamiast $k$ otrzymujemy, że sumy są równe pozostawiając jedynie $a^n - b^n$.
 \end{proof}
-
-
-\begin{example}
-  $a^{2k} - b^{2k} = a^{2k} - \left(-b\right)^{2k}$, gdzie $k \in N$,
-\end{example}

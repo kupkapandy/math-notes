@@ -20,7 +20,6 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage{parskip}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{multicol}
 
@@ -41,6 +40,10 @@
 \newcommand\C{\ensuremath{\mathbb{C}}}
 \newcommand\F{\ensuremath{\mathbb{F}}}
 
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\nwd}{nwd}
+
 \let\implies\Rightarrow
 \let\impliedby\Leftarrow
 \let\iff\Leftrightarrow
@@ -59,14 +62,14 @@
 
 \theoremstyle{definition}
 
-\declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = no, mdframed = {nobreak}]{definitionbox}
+\declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = yes, mdframed = {nobreak}]{definitionbox}
+\declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = yes, mdframed = {nobreak}]{theorembox}
 \declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = no]{examplebox}
-\declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = no, mdframed = {nobreak}]{theorembox}
-\declaretheoremstyle[ headfont = \bfseries\upshape, bodyfont = \normalfont, numbered = no, qed=$\blacksquare$]{thmproofbox}
+\declaretheoremstyle[ headfont = \bfseries\itshape, bodyfont = \normalfont, numbered = no, qed=$\blacksquare$]{thmproofbox}
 
 \declaretheorem[style=definitionbox, name=Definicja]{definition}
-\declaretheorem[style=examplebox, name=Przykład]{example}
 \declaretheorem[style=theorembox, name=Twierdzenie]{theorem}
+\declaretheorem[style=examplebox, name=Przykład]{example}
 \declaretheorem[numbered=no, style=thmproofbox, name=Dowód]{replacementproof}
 \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
 

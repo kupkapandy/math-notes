@@ -1,0 +1,96 @@
+% !TeX root = ./main.tex
+
+\chapter{Podstawy}
+\setcounter{section}{-1}
+\section{Podzielność}
+
+\iffalse
+\begin{definition}
+  ~ % To add empty line
+  \begin{itemize}
+    \item Liczba całkowita $n$ jest parzysta jeżeli $n = 2k$ dla jakiegoś $k$
+    \item Liczba całkowita $n$ jest nieparzysta jeżeli $n = 2k + 1$ dla jakiegoś $k$
+  \end{itemize}
+\end{definition}
+\fi
+
+\begin{definition}
+  Liczba całkowita $b$ jest podzielna przez liczbe całkowitą $a$,
+  wtedy gdy $b = ak$, dla jakieś liczby całkowitej $k$.
+  Gdy $a$ dzieli $b$ to $a \mid b$,
+  natomiast gdy $a$ nie dzieli $b$ to $a \nmid b$.
+\end{definition}
+
+\begin{theorem}
+  Niech $a, b, c$ to liczby całkowite. Jeżeli $a \mid b$ i $b \mid c$, to $a \mid c$.
+\end{theorem}
+
+\begin{proof}
+  Niech $b = ak$ i $c = bl$.
+  Zatem $c = akl$, gdzie $kl$ to liczba całkowita.
+  Więc liczba $a$ dzieli liczbę $c$ ($a \mid c$).
+\end{proof}
+
+\begin{theorem}
+  Dla wszystkich liczb całkowitych $a$ i $m$ gdzie $m > 0$,
+  istnieją dwie liczby całkowite $q$ i $r$, takie że:
+  \[
+    a = mq + r
+  \]
+  gdzie $0 \leq r < m$.
+\end{theorem}
+
+\section{Największy wspólny dzielnik (GCD)}
+
+\begin{definition}
+  Niech $a$ i $b$ to liczby całkowite.
+  Jeżeli $c \mid a$ i $c \mid b$,
+  to $c$ jest wspólnym dzielnikiem liczb $a$ i $b$.
+
+  Największy wspólny dzielnik
+  liczb $a$ i $b$ to największa liczba $d$,
+  taka która $d \mid a$ i $d \mid b$.
+  Oznacza się ją $\nwd(a, b)$, $\gcd(a, b)$.
+\end{definition}
+
+\begin{theorem}
+  (\textit{Tożsamość Bézouta}).
+  Jeżeli a i b to dodatnie liczby całkowite,
+  to istnieją liczby całkowite $k$ i $l$, takie że:
+  \[
+    \gcd(a, b) = ak + bl
+  \]
+\end{theorem}
+
+\begin{proof}
+  Niech $a$ i $b$ to wartości stałe
+  oraz niech $d$ będzie najmniejszą wartością
+  sumy $ax + ay$, więc:
+  \begin{equation}
+    d = ak + bl.
+  \end{equation}
+  Aby udowodnić, że $d = \gcd(a, b)$ trzeba wykazać,
+  że $d$ jest wspólnym dzielnikiem liczb $a$ oraz $b$
+  i jest on jednocześnie największym takim dzielnikiem.
+
+  \vspace{1em}
+
+  \noindent\underline{Część 1.}
+  Pokażemy, że $d$ jest wspólnym dzielnikiem liczb $a$ i $b$.
+  Wiemy, że istnieją liczby $q$ oraz $r$ takie, że (Twierdzenie 2.):
+  \[
+    a = dq + r
+  .\]
+  gdzie, $0 \leq r < d$. Zmieniając zapis:
+  \begin{align*}
+    r &= a - dq \\ % add (1.1)
+      &= a - (ak + bl)q \\
+      &= a(1 - kq) + b(-lq) \\
+  \end{align*}
+
+  \vspace{1em}
+
+  \noindent\underline{Część 2.}
+  Wykazanie, że $d$ to największy wspólny dzielnik $a$ oraz $b$.
+
+\end{proof}

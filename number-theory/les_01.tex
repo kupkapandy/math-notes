@@ -65,7 +65,7 @@
 \begin{proof}
   Niech $a$ i $b$ to wartości stałe
   oraz niech $d$ będzie najmniejszą wartością
-  sumy $ax + ay$, więc:
+  sumy $ax + by$, więc:
   \begin{equation}
     d = ak + bl.
   \end{equation}
@@ -87,10 +87,50 @@
       &= a - (ak + bl)q \\
       &= a(1 - kq) + b(-lq) \\
   \end{align*}
+  Jako, że $1 - kq$ oraz  $-lq$ to liczby całkowite, przedstawiliśmy
+  $r$ jako $ax + by$. Ale jako, że $d$ to najmniejsza wartość wyrażenia
+  $ax + by$ i $0 \leq r < d$, to $r = 0$.
 
   \vspace{1em}
 
   \noindent\underline{Część 2.}
-  Wykazanie, że $d$ to największy wspólny dzielnik $a$ oraz $b$.
+  Pokażemy, że $d$ to największy wspólny dzielnik liczb $a$ i $b$.
+  Niech $d'$ to inny wspólny dzielnik liczb $a$ i $b$, więc
+  $d' \mid a$ oraz $d' \mid b$.
+  \[
+    d'n = a \quad \mathrm{i} \quad d'm = b
+  \]
+  gdzie $n, m$ to liczby całkowite.
 
+  Podstawiając pod  $(1.1)$ otrzymujemy:
+  \begin{align*}
+    d &= ak + bl \\
+      &= d'nk + d'ml \\
+      &= d'(nk + ml) \\
+  \end{align*}
+  Zauważamy, że $d' = \frac{d}{nk + ml}$, otrzymując $d' \leq d$, co kończy dowód.
 \end{proof}
+
+\begin{definition}
+  Niech $a, r$ i $m$ to liczby całkowite. Mówimy, że liczba $a$ jest przystająca
+  do liczby $r$ modulo $m$, gdy $m \mid a - r$.
+
+  Innymi słowy: liczby $a$ i $r$
+  mają tę samą resztę z dzielenia przez $m$, czyli:
+  \[
+    a \equiv r \pmod{m}
+  .\]
+\end{definition}
+
+\begin{theorem}
+  (\textit{Prawo anulowania}).
+  Niech $a, \, b, \, k$ i $m$ to liczby całkowite, gdzie $k \neq 0$.
+  Jeżeli $ak \equiv bk \pmod{m}$ i $\gcd(k, m) = 1$, to $a \equiv b \pmod{m}$.
+\end{theorem}
+
+\begin{theorem}
+  (\textit{Małe twierdzenie Fermata}). Jeżeli $a$ to liczba całkowita i
+  $p$ to liczba pierwsza która nie dzieli $a$, to \[
+    a^{p - 1} \equiv 1 \pmod{p}
+  .\]
+\end{theorem}

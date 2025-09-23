@@ -1,29 +1,118 @@
 % !TeX root = ./main.tex
 
-\section{Rownanie}
-Rozwiążmy poniższe równanie:
-\[
-  \N \subseteq \Z
-\]
-
-\subsection{Podrownanie}
-
-\begin{definition}
-  Jeżeli $a = b$, to $b = a$.
-\end{definition}
+\section{Wprowadzenie i sformułowanie wyniku}
+W 1960 roku Linnik pokazał, że istnieje nieskończenie wiele liczb pierwszych postaci $p = x^2 + y^2 + 1$,  
+gdzie $x$ i $y$ są liczbami całkowitymi.  
+Dokładniej, udowodnił on asymptotyczny wzór:
+%
+\begin{equation*}
+  \sum_{p \leq X}{r(p - 1)}
+    =
+  \pi \prod_{p > 2}
+  \left(
+    1 + \frac{\chi_4(p)}{p(p - 1)}
+  \right)
+  \frac{X}{\log X}
+    +
+  \mathcal{O}
+  \left(
+    \frac{X (\log \log X)^7}{(\log X)^{1 + \theta_0}}
+  \right)
+\end{equation*}
+%
+gdzie $r(k)$ oznacza liczbę rozwiązań równania $k = x^2 + y^2$ w liczbach całkowitych,  
+$\chi_4(k)$ to niegłówna (niepryncypalna) funkcja Dirichleta modulo 4, a
+%
+\begin{equation}
+  \theta_0 = \frac{1}{2} - \frac{1}{4} e \log 2 = 0{,}0289 \dots
+\end{equation}
 
 \begin{theorem}
-  Jeżeli $a = b$, to $b = a$.
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
 \end{theorem}
 
-\begin{example}
-  Jeżeli $a = b$, to $b = a$.
-\end{example}
+\begin{definition}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{definition}
 
 \begin{lemma}
-  Jeżeli $a = b$, to $b = a$.
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
 \end{lemma}
 
-\begin{proof}[jak to zrobic]
-  \textsection
+\begin{proposition}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{proposition}
+
+\begin{corollary}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{corollary}
+
+\begin{remark}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{remark}
+
+\begin{example}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{example}
+
+\begin{proof}
+  Niech $f$ będzie funkcją różniczkowalną w każdym punkcie,  
+  wtedy $f$ jest funkcją ciągłą.
+\end{proof}
+
+\begin{proof}
+  Niech $a$ i $b$ to wartości stałe
+  oraz niech $d$ będzie najmniejszą wartością
+  sumy $ax + by$, więc:
+  \begin{equation}
+    d = ak + bl.
+  \end{equation}
+  Aby udowodnić, że $d = \gcd(a, b)$ trzeba wykazać,
+  że $d$ jest wspólnym dzielnikiem liczb $a$ oraz $b$
+  i jest on jednocześnie największym takim dzielnikiem.
+
+  \vspace{1em}
+
+  \noindent\underline{Część 1.}
+
+  Pokażemy, że $d$ jest wspólnym dzielnikiem liczb $a$ i $b$.
+  Wiemy, że istnieją liczby $q$ oraz $r$ takie, że (Twierdzenie 2.):
+  \[
+    a = dq + r
+  .\]
+  gdzie, $0 \leq r < d$. Zmieniając zapis:
+  \begin{align*}
+    r &= a - dq \\ % add (1.1)
+      &= a - (ak + bl)q \\
+      &= a(1 - kq) + b(-lq) \\
+  \end{align*}
+  Jako, że $1 - kq$ oraz  $-lq$ to liczby całkowite, przedstawiliśmy
+  $r$ jako $ax + by$. Ale jako, że $d$ to najmniejsza wartość wyrażenia
+  $ax + by$ i $0 \leq r < d$, to $r = 0$.
+
+  \vspace{1em}
+
+  \noindent\underline{Część 2.}
+  Pokażemy, że $d$ to największy wspólny dzielnik liczb $a$ i $b$.
+  Niech $d'$ to inny wspólny dzielnik liczb $a$ i $b$, więc
+  $d' \mid a$ oraz $d' \mid b$.
+  \[
+    d'n = a \quad \mathrm{i} \quad d'm = b
+  \]
+  gdzie $n, m$ to liczby całkowite.
+
+  Podstawiając pod  $(1.1)$ otrzymujemy:
+  \begin{align*}
+    d &= ak + bl \\
+      &= d'nk + d'ml \\
+      &= d'(nk + ml) \\
+  \end{align*}
+  Zauważamy, że $d' = \frac{d}{nk + ml}$, otrzymując $d' \leq d$, co kończy dowód.
 \end{proof}

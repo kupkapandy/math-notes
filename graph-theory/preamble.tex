@@ -64,18 +64,28 @@
     topline = false,
     bottomline = false,
     rightline = false,
+    leftline = true,
   },
   numbered = no,
   qed=$\qedsymbol$
 ]{thmproofbox}
 
-\declaretheorem[style=thmdefinitionbox,name=Definicja]{definition}
-\declaretheorem[style=thmexamplebox,name=Przykład]{example}
-\declaretheorem[style=thmtheorembox,name=Twierdzenie]{theorem}
-\declaretheorem[style=thmlemmabox,name=Lemat]{lemma}
-
 \declaretheorem[style=thmproofbox,name=Dowód]{rproof}
 \renewenvironment{proof}[1][\proofname]{\begin{rproof}}{\end{rproof}}
+
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\theoremstyle{plain}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
 
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\Z{\ensuremath{\mathbb{Z}}}

@@ -1,0 +1,89 @@
+\usepackage[polish]{babel}
+%\usepackage[utf8]{inputenc} % idk
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%\usepackage{pgfplots}
+
+\usepackage{graphicx}
+\usepackage[svgnames,dvipsnames,table]{xcolor}
+\usepackage{hyperref}
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage{titlesec}
+
+\mdfsetup{
+  skipabove = 0.4\baselineskip,
+  skipbelow = 0.3\baselineskip,
+  hidealllines = true,
+}
+
+\definecolor{definitionbg}{HTML}{FABD2F}
+\definecolor{definitionfg}{HTML}{00A190}
+\declaretheoremstyle[
+  headfont=\sffamily\upshape,
+  headpunct={\\[3pt]},
+  postheadspace={3pt},
+  mdframed = {
+    nobreak = false,
+    backgroundcolor=RawSienna!5,
+  },
+]{thmdefinitionbox}
+
+\declaretheoremstyle[
+  headfont=\bfseries\upshape,
+  mdframed = {
+    nobreak = false,
+  },
+]{thmexamplebox}
+
+\declaretheoremstyle[
+  headfont=\bfseries\upshape,
+  mdframed = {
+    nobreak = false,
+  },
+]{thmtheorembox}
+
+\declaretheoremstyle[
+  headfont=\bfseries\upshape,
+  mdframed = {
+    nobreak = false,
+  },
+]{thmlemmabox}
+
+\declaretheoremstyle[
+  headfont = \bfseries\itshape,
+  mdframed = {
+    nobreak = false,
+    topline = false,
+    bottomline = false,
+    rightline = false,
+  },
+  numbered = no,
+  qed=$\qedsymbol$
+]{thmproofbox}
+
+\declaretheorem[style=thmdefinitionbox,name=Definicja]{definition}
+\declaretheorem[style=thmexamplebox,name=Przykład]{example}
+\declaretheorem[style=thmtheorembox,name=Twierdzenie]{theorem}
+\declaretheorem[style=thmlemmabox,name=Lemat]{lemma}
+
+\declaretheorem[style=thmproofbox,name=Dowód]{rproof}
+\renewenvironment{proof}[1][\proofname]{\begin{rproof}}{\end{rproof}}
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+
+
+\title{Teoria Grafów}
+\author{}
+\date{}
